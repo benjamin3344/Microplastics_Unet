@@ -8,7 +8,7 @@ Science of the Total Environment. Four models were adapted for microplastics sem
 - VGG-16: [https://github.com/sajadn/Exemplar-VAE](https://github.com/sajadn/Exemplar-VAE) shape classification
 - Pixel-embedding U-Net: [https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings](https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings) instance segmentation
 
-<img scr='imgs/pipeline.png' />
+<img src='imgs/pipeline.png' />
 
 ## Requirements
 - python 3.6/3.7
