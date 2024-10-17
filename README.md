@@ -8,11 +8,55 @@ Science of the Total Environment. Four models were adapted for microplastics sem
 - VGG-16: [https://github.com/sajadn/Exemplar-VAE](https://github.com/sajadn/Exemplar-VAE) shape classification
 - Pixel-embedding UNet: [https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings](https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings) instance segmentation
 
+## Requirements
+- python 3.6
+- tensorflow_gpu 1.14.1
+- please check example_scripts for other libraries
+
 
 ## Data
 
 A manually labelled SEM dataset of microplastics was built. Image segmentation and shape classification were performed on 3 classes: fibres,
 beads and fragments as shown in the paper [https://doi.org/10.1016/j.scitotenv.2022.153903](https://doi.org/10.1016/j.scitotenv.2022.153903). Datasets were uploaded to Mendeley Data [https://data.mendeley.com/datasets/z6459vntbr/1](https://data.mendeley.com/datasets/z6459vntbr/1) (will soon be updated to https://data.mendeley.com/datasets/z6459vntbr/2)
+
+
+## Models 
+
+### Instance Segmentation
+
+Training phase
+```
+dist_branch=True
+include_bg=True
+embedding_dim=16
+
+train_dir="fibre/fibre_cc/cc_all_neighbor/train"
+validation=True
+val_dir="fibre/fibre_cc/cc_all_neighbor/val"
+
+image_depth="uint8" #"uint16"
+image_channels=1
+model_dir=$SOURCEDIR/pixel_emb_result7
+
+lr=0.0001
+batch_size=4 #4
+training_epoches=300 #300
+python3 main.py --phase=train\
+	--dist_branch="$dist_branch"  --include_bg="$include_bg" \
+	--embedding_dim="$embedding_dim" \
+	--train_dir="$train_dir" \
+	--validation="$validation" \
+	--val_dir="$val_dir" \
+	--image_depth="$image_depth" \
+	--image_channels="$image_channels" \
+	--model_dir=$model_dir \
+	--lr="$lr" \
+	--batch_size="$batch_size" \
+	--training_epoches="$training_epoches" \
+	--validation_steps=100 \
+	--save_steps=2000
+```
+
 
 
 
