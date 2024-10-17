@@ -6,10 +6,10 @@ Science of the Total Environment. Four models were adapted for microplastics sem
 - U-Net: [https://github.com/zhixuhao/unet](https://github.com/zhixuhao/unet) semantic segmentation
 - MultiResUNet: [https://github.com/nibtehaz/MultiResUNet](https://github.com/nibtehaz/MultiResUNet) semantic segmentation
 - VGG-16: [https://github.com/sajadn/Exemplar-VAE](https://github.com/sajadn/Exemplar-VAE) shape classification
-- Pixel-embedding UNet: [https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings](https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings) instance segmentation
+- Pixel-embedding U-Net: [https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings](https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings) instance segmentation
 
 ## Requirements
-- python 3.6
+- python 3.6/3.7
 - tensorflow_gpu 1.14.1
 - please check example_scripts for other libraries
 
@@ -21,6 +21,19 @@ beads and fragments as shown in the paper [https://doi.org/10.1016/j.scitotenv.2
 
 
 ## Models 
+
+### Semantic Segmentation
+Training U-Net/MultiResUNet
+```
+python main.py
+
+```
+
+The hyperparameters can be changed within main.py.  For example, this line controls training/testing of U-Net or MultiResUNet. The splitfolder was used to performed 5-fold cross validation. 
+```
+mode = 'training' ## 'multiresunet_training', 'testing', 'multiresunet_testing'
+```
+
 
 ### Instance Segmentation
 
@@ -57,10 +70,24 @@ python3 main.py --phase=train\
 	--save_steps=2000
 ```
 
+Prediction phase
+```
+python3 main.py --phase=prediction \
+	--test_dir=fibre/fibre_cc/cc/test/image --test_res=$model_dir \
+	--model_dir=$model_dir  \
+	--dist_branch="$dist_branch"  --include_bg="$include_bg" \
+	--embedding_dim="$embedding_dim" --train_dir="$train_dir" \
+	--validation="$validation" \
+	--val_dir="$val_dir" \
+	--image_depth="$image_depth" \
+	--image_channels="$image_channels" 
+```
+
+### Shape Classification
 
 
 
-  ## Citation
+## Citation
 
 Cite our paper using the following bibtex item:
 ```
