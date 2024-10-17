@@ -86,7 +86,7 @@ python3 main.py --phase=prediction \
 
 ### Shape Classification
 
-
+Run 'classification.py' with 5-fold cross-validation. Pre-trained convolutional layers using the ImageNet weights. Retrained the last fewer layers of the model with fine-tuning.
 
 ## Citation
 
