@@ -9,7 +9,7 @@ Science of the Total Environment. Four models were adapted for microplastics sem
 - Pixel-embedding UNet: [https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings](https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings) instance segmentation
 
 
-  ## Data
+## Data
 
 A manually labelled SEM dataset of microplastics was built. Image segmentation and shape classification were performed on 3 classes: fibres,
 beads and fragments as shown in the paper [https://doi.org/10.1016/j.scitotenv.2022.153903](https://doi.org/10.1016/j.scitotenv.2022.153903). Datasets were uploaded to Mendeley Data [https://data.mendeley.com/datasets/z6459vntbr/1](https://data.mendeley.com/datasets/z6459vntbr/1) (will soon be updated to https://data.mendeley.com/datasets/z6459vntbr/2)
@@ -38,4 +38,4 @@ Shi, Bin, et al. "Automatic quantification and classification of microplastics i
 
 ## Acknowledgements
 
-The project is supported by the WaterSeed Fund from Institute for Water Innovation, University of Toronto and by the Natural Sciences and Engineering Research Council of Canada (NSERC)'s Discovery Grant. Electron microscopy was performed at the Open Centre for the Characterization of Advanced Materials (OCCAM), funded by the Canada Foundation for Innovation. This research was enabled in part by support provided by Compute Canada.
+The project is supported by the WaterSeed Fund from Institute for Water Innovation, University of Toronto and by the Natural Sciences and Engineering Research Council of Canada (NSERC)'s Discovery Grant. Electron microscopy was performed at the Open Centre for the Characterization of Advanced Materials (OCCAM), funded by the Canada Foundation for Innovation. This research was enabled in part by support provided by Compute Canada. Welcome to contact Professor Jane Y. Howe and  R.J. Dwayne Miller for further collaboration. 
