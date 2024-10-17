@@ -5,7 +5,7 @@ Science of the Total Environment. Four models were adapted for microplastics sem
 
 - U-Net: [https://github.com/zhixuhao/unet](https://github.com/zhixuhao/unet) semantic segmentation
 - MultiResUNet: [https://github.com/nibtehaz/MultiResUNet](https://github.com/nibtehaz/MultiResUNet) semantic segmentation
-- VGG-16: [https://github.com/sajadn/Exemplar-VAE](https://github.com/sajadn/Exemplar-VAE) shape classification
+- VGG-16: VGG16 with ImageNet weights: shape classification
 - Pixel-embedding U-Net: [https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings](https://github.com/looooongChen/instance_segmentation_with_pixel_embeddings) instance segmentation
 
 <img src='imgs/pipeline.png' />
@@ -87,6 +87,11 @@ python3 main.py --phase=prediction \
 ### Shape Classification
 
 Run 'classification.py' with 5-fold cross-validation. Pre-trained convolutional layers using the ImageNet weights. Retrained the last fewer layers of the model with fine-tuning.
+```
+conv_base = VGG16(include_top=False,
+                      weights='imagenet',
+                      input_shape=input_shape)
+```
 
 ## Citation
 
