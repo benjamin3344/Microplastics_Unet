@@ -118,4 +118,4 @@ Shi, Bin, et al. "Automatic quantification and classification of microplastics i
 The project is supported by the WaterSeed Fund from Institute for Water Innovation, University of Toronto and by the Natural Sciences and Engineering Research Council of Canada (NSERC)'s Discovery Grant. Electron microscopy was performed at the Open Centre for the Characterization of Advanced Materials (OCCAM), funded by the Canada Foundation for Innovation. This research was enabled in part by support provided by Compute Canada. Welcome to contact Professor Jane Y. Howe and  R.J. Dwayne Miller for further collaboration. 
 
 ## To-do lists
-- ~~Pre-trained weights~~  Mendeley Data [https://data.mendeley.com/datasets/z6459vntbr/3](https://data.mendeley.com/datasets/z6459vntbr/3).
+- ~~Pre-trained weights~~  Pretrained wieghts released on Mendeley Data [https://data.mendeley.com/datasets/z6459vntbr/3](https://data.mendeley.com/datasets/z6459vntbr/3).
